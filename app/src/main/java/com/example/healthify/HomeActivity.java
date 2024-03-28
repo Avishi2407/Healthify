@@ -21,8 +21,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-        String username = sharedPreferences.getString("username", "").toString();
-        Toast.makeText(getApplicationContext(),"Welcome" + username , Toast.LENGTH_SHORT).show();
+        String username = sharedPreferences.getString("username ", "").toString();
+        Toast.makeText(getApplicationContext(),"Welcome " + username , Toast.LENGTH_SHORT).show();
 
         CardView exit = findViewById(R.id.cardExit);
         exit.setOnClickListener(new View.OnClickListener() {
